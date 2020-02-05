@@ -1,0 +1,24 @@
+# Path Root Folder
+# --------------------
+* /media/nogales/NOGALES/TNC_BackUp/Project-SIMA/SIMA-TIER_1/SIMA-Server-MC/Root_Folder
+
+# --------------------
+# Path DEM
+# --------------------
+* /media/nogales/NOGALES/TNC_BackUp/Project-SIMA/SIMA-TIER_1/SIMA-Server-MC/DEM/DEM.tiff
+
+# --------------------
+# Path Rasters - Footprints
+# --------------------
+* /media/nogales/NOGALES/TNC_BackUp/Project-SIMA/SIMA-TIER_1/SIMA-Server-MC/Rasters_Footprints
+
+# --------------------
+# Path BinFiles_Matlab
+# --------------------
+* /media/nogales/NOGALES/TNC_BackUp/Project-SIMA/SIMA-TIER_1/SIMA-Server-MC/BinFiles_Matlab
+
+# --------------------
+# Threshold for Flow Accumulation (Cells number)
+# This Parameters depend of the Digital elevation model resolution
+# --------------------
+* 50
