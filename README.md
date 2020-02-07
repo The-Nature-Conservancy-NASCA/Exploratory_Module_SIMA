@@ -20,6 +20,8 @@ La fragmentación de sistemas fluviales se refiere a la pérdida de conectividad
 
 ![Fragmentation](https://github.com/The-Nature-Conservancy-NASCA/Images_Repository/blob/master/Exploratory_Module_SIMA/Frag.jpg =10x20)
 
+<img src="https://github.com/The-Nature-Conservancy-NASCA/Images_Repository/blob/master/Exploratory_Module_SIMA/Frag.jpg" width="200" height="100" />
+
 En este contexto, el índice de fragmentación de sistemas fluviales permite cuantificar de manera porcentual la perdida de red fluvial asociada a un proceso natural específico como, por ejemplo, tramos fluviales asociados a un ecosistema ribereño, el rango de migración de peces, etc. Matemáticamente éste índice se define como:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;{P}_{c,i}=(1-\frac{{L}_{i}}{{L}_{0,i}})*100"/>
