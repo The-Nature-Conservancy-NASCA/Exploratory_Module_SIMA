@@ -18,7 +18,7 @@ Principalmente los análisis han sido centrados a tres tipos de impactos que gen
 
 La fragmentación de sistemas fluviales se refiere a la pérdida de conectividad natural dentro y entre los sistemas fluviales, lo que limita los procesos naturales fundamentales para el funcionamiento de los ecosistemas como lo son la transferencia de organismos, sedimentos y nutrientes.
 
-![Fragmentation](https://github.com/The-Nature-Conservancy-NASCA/Images_Repository/blob/master/Exploratory_Module_SIMA/Frag.jpg)
+![Fragmentation](https://github.com/The-Nature-Conservancy-NASCA/Images_Repository/blob/master/Exploratory_Module_SIMA/Frag.jpg =10x20)
 
 En este contexto, el índice de fragmentación de sistemas fluviales permite cuantificar de manera porcentual la perdida de red fluvial asociada a un proceso natural específico como, por ejemplo, tramos fluviales asociados a un ecosistema ribereño, el rango de migración de peces, etc. Matemáticamente éste índice se define como:
 
