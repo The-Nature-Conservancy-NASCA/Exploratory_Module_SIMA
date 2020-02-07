@@ -1,7 +1,8 @@
 # TIER-1-Toolbox
 
-TIER-1 Toolbox es un módulo diseñado para SIMA en el marco del proyecto Google Challenge, para estimar los impactos acumulativos que generan las grandes centrales hidroeléctricas en el sistema fluvial de una cuenca hidrográfica.
+TIER-1 Toolbox es un módulo diseñado para SIMA en el marco del proyecto Google Challenge, para estimar los impactos acumulativos que generan las grandes centrales hidroeléctricas en el sistema fluvial de una cuenca hidrográfica.\
 Este modulo tiene la capacidad de calcular los siguientes indicadores:\
+
 •	Fragmentación de la red fluvial\
 •	Grado de regulación de caudal liquido (DOR)\
 •	Grado de regulación de caudal liquido Ponderado (DORw)\
@@ -10,8 +11,7 @@ Este modulo tiene la capacidad de calcular los siguientes indicadores:\
 
 ## Marco Conceptual
 
-En el espíritu de la búsqueda de soluciones equilibradas, en los últimos años, a nivel global han surgido una serie de propuestas de evaluación temprana de los conflictos ambientales y sociales regionales que generalmente afectan la sostenibilidad del sector hidroeléctrico. Entre estas soluciones se encuentra 
-La perspectiva metodológica de Hidroenergía por Diseño ha sido desarrollada por TNC en los últimos años con objetivo es generar una respuesta de solución integral para balancear la generación de energía hidroeléctrica y la conservación de los ríos y los beneficios que generan a la sociedad a partir de la implementación de la Jerarquía de la Mitigación (evitar, minimizar y compensar impactos del sector), promoviendo principalmente un proceso de planificación temprana e integral del desarrollo hidroeléctrico a escala de cuenca con la participación de los actores relevantes, con el propósito de evaluar las posibles alternativas de desarrollo a futuro para reducir los riesgos ambientales y sociales.
+En el espíritu de la búsqueda de soluciones equilibradas, en los últimos años, a nivel global han surgido una serie de propuestas de evaluación temprana de los conflictos ambientales y sociales regionales que generalmente afectan la sostenibilidad del sector hidroeléctrico. Entre estas soluciones se encuentra la perspectiva metodológica de Hidroenergía por Diseño ha sido desarrollada por TNC en los últimos años con objetivo es generar una respuesta de solución integral para balancear la generación de energía hidroeléctrica y la conservación de los ríos y los beneficios que generan a la sociedad a partir de la implementación de la Jerarquía de la Mitigación (evitar, minimizar y compensar impactos del sector), promoviendo principalmente un proceso de planificación temprana e integral del desarrollo hidroeléctrico a escala de cuenca con la participación de los actores relevantes, con el propósito de evaluar las posibles alternativas de desarrollo a futuro para reducir los riesgos ambientales y sociales.
 Principalmente los análisis han sido centrados a tres tipos de impactos que genera el sector hidroenergético: i) La fragmentación de sistemas fluviales, ii) los efectos aguas abajo asociados a los cambios de régimen de caudales y sedimentos y iii) la huella de la inundación de los embalses sobre valores ambientales, sociales y/o culturales en la cuenca.
 
 ### Fragmentación de la red fluvial
@@ -22,7 +22,7 @@ La fragmentación de sistemas fluviales se refiere a la pérdida de conectividad
 
 En este contexto, el índice de fragmentación de sistemas fluviales permite cuantificar de manera porcentual la perdida de red fluvial asociada a un proceso natural específico como, por ejemplo, tramos fluviales asociados a un ecosistema ribereño, el rango de migración de peces, etc. Matemáticamente éste índice se define como:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;{P}_{c,i}=(1-\frac{{L}_{i}}{{L}_{0,i}})*100"/>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;{P}_{c,i}=(1-\frac{{L}_{i}}{{L}_{0,i}})*100"/>\
 
 P_(c,i)	Porcentaje de pérdida de la red de drenaje asociada al proceso de interés i.
 L_0	Longitud de la red de drenaje asociada al proceso i, en la condición de línea base.
