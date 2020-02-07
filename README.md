@@ -18,8 +18,7 @@ Principalmente los análisis han sido centrados a tres tipos de impactos que gen
 
 La fragmentación de sistemas fluviales se refiere a la pérdida de conectividad natural dentro y entre los sistemas fluviales, lo que limita los procesos naturales fundamentales para el funcionamiento de los ecosistemas como lo son la transferencia de organismos, sedimentos y nutrientes.
 
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
+![Fragmentation](https://github.com/The-Nature-Conservancy-NASCA/Images_Repository/blob/master/Exploratory_Module_SIMA/Frag.jpg)
 
 En este contexto, el índice de fragmentación de sistemas fluviales permite cuantificar de manera porcentual la perdida de red fluvial asociada a un proceso natural específico como, por ejemplo, tramos fluviales asociados a un ecosistema ribereño, el rango de migración de peces, etc. Matemáticamente éste índice se define como:
 
@@ -38,8 +37,7 @@ El grado de regulación o DOR (por sus siglas en inglés: Degree of Regulation) 
 
 El DOR es útil como una aproximación de la extensión y magnitud de los impactos acumulativos en el régimen de caudales. A mayores valores del DOR indican una mayor alteración de la estacionalidad del régimen de flujo natural por el efecto regulador de los embalses. Por ejemplo, un valor de DOR igual al 100% significa que aguas arriba de un tramo fluvial i es posible almacenar un volumen de agua equivalente a un año de escorrentía media.\
 
-![alt text][logo]
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+![DOR](https://github.com/The-Nature-Conservancy-NASCA/Images_Repository/blob/master/Exploratory_Module_SIMA/DOR.jpg)
 
 Adicionalmente, dado que se estima en cada uno de los tramos de la red topológica fluvial, para una configuración dada de embalses en la cuenca, permite establecer la longitud de ríos afectados con diferentes grados de regulación (ver Figura 21).
 
