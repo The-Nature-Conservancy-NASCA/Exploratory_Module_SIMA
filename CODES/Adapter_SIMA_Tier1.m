@@ -56,7 +56,7 @@ UserData.R_FileAreaVolumen      = 'Area_Volumen.csv';
 UserData.R_FileDEM              = 'DEM.mat';
 UserData.R_FileFlowDir          = 'FlowDir.mat';
 UserData.R_FileFlowAccum        = 'FlowAccum.mat';
-UserData.R_FileWaterMirror      = 'Watermirror.tiff';
+UserData.R_FileWaterMirror      = 'Watermirror.tif';
 
 try 
     %% Load Control File MATLAB
@@ -279,8 +279,59 @@ try
     Hp.Scenario     = (Tmp(:,1)*0);
     Hp.StatusRan    = 0;
     Hp.NumRand      = 0;
-    Hp.Qmed         = (Tmp(:,1)*0);
-
+    Hp.Qmed         = (Tmp(:,1)*0);    
+    
+    %% Check -> Hydropower Variables
+    NameFile  = fullfile(UserData.MainPath, UserData.UserName,'Outputs', num2str(UserData.ExeNumber),'StausError.txt ');
+    ID_File     = fopen(NameFile,'w');
+    
+    % DOR and DORw check
+    JoJo = Hp.Volumen == 0;
+    if sum(JoJo) > 0
+        ValueError = Hp.ID(JoJo);
+        fprintf(ID_File,'- En los modelos de DOR y DORw los siguientes proyectos identificados con los códigos ');
+        fprintf(ID_File,num2str(ValueError(1)));        
+        for i = 2:length(ValueError)
+            fprintf(ID_File,[', ',num2str(ValueError(i))]);
+        end
+        fprintf(ID_File,'  no fueron considerados dado que presentan valores de cero [0] en el volumen embalsado');
+        fprintf(ID_File,'\n');
+    else
+        fprintf(ID_File,'- En los modelos de DOR y DORw todos los proyectos fueron considerados.');
+        fprintf(ID_File,'\n');
+    end 
+    
+    % SAI
+    JoJo = Hp.LossRate == 0;
+    if sum(JoJo) > 0
+        ValueError = Hp.ID(JoJo);
+        fprintf(ID_File,'- En el modelo de SAI los siguientes proyectos identificados con los códigos ');
+        fprintf(ID_File,num2str(ValueError(1)));        
+        for i = 2:length(ValueError)
+            fprintf(ID_File,[', ',num2str(ValueError(i))]);
+        end
+        fprintf(ID_File,'  no fueron considerados dado que presentan valores de cero [0] en el porcentaje de retención de sedimentos.');
+        fprintf(ID_File,'\n');
+    else
+        fprintf(ID_File,'- En el modelo de SAI todos los proyectos fueron considerados.');
+        fprintf(ID_File,'\n');
+    end
+    
+    % Huella
+    JoJo = Hp.Height == 0;
+    if sum(JoJo) > 0
+        ValueError = Hp.ID(JoJo);
+        fprintf(ID_File,'- En el modelo de Huella los siguientes proyectos identificados con los códigos ');
+        fprintf(ID_File,num2str(ValueError(1)));        
+        for i = 2:length(ValueError)
+            fprintf(ID_File,[', ',num2str(ValueError(i))]);
+        end
+        fprintf(ID_File,'  no fueron considerados dado que presentan valores de cero [0] en el porcentaje de retención de sedimentos.');
+    else
+        fprintf(ID_File,'- En el modelo de Huella todos los proyectos fueron considerados.');
+    end
+    fclose(ID_File);   
+    
     if UserData.ExplorerStatus == 0
         %% Streamflow
         if sum(isnan(Streamflow)) == 0
@@ -472,7 +523,10 @@ try
                     fprintf(ID_File, Value, [Hp.ID(Hp.Scenario)'; Footprint_Hp']);
                     fclose(ID_File);
                 end
-                WaterMirror.GRIDobj2geotiff(fullfile(UserData.MainPath, UserData.UserName,'Outputs', UserData.ExeNumber,'BaseLine','Footprints',UserData.R_FileWaterMirror))
+                NW = fullfile(UserData.MainPath, UserData.UserName,'Outputs', UserData.ExeNumber,'BaseLine','Footprints',UserData.R_FileWaterMirror);
+                WaterMirror.GRIDobj2geotiff(NW)
+                movefile(NW, [NW,'f'])
+                
             end
         end
 
@@ -631,7 +685,10 @@ try
                 end
                 
 %                 WaterMirror.GRIDobj2geotiff(fullfile(UserData.MainPath, UserData.UserName,'Outputs', UserData.ExeNumber,['Narrative-',num2str(i)],'Footprints',UserData.R_FileWaterMirror))
-                WaterMirror.GRIDobj2geotiff(fullfile(UserData.MainPath, UserData.UserName,'Outputs', UserData.ExeNumber,NameFolderNarra{i},'Footprints',UserData.R_FileWaterMirror))
+                NW = fullfile(UserData.MainPath, UserData.UserName,'Outputs', UserData.ExeNumber,NameFolderNarra{i},'Footprints',UserData.R_FileWaterMirror);
+                WaterMirror.GRIDobj2geotiff(NW)
+                movefile(NW, [NW,'f'])
+                
             end
             
         end        
@@ -705,9 +762,10 @@ try
             fprintf(ID_File, Value, [Factor*Hp.Height; Factor; Footprint_Hp']);
             fclose(ID_File);
         end
-
-        WaterMirror.GRIDobj2geotiff(fullfile(UserData.MainPath, UserData.UserName,'Outputs', UserData.ExeNumber,'Explore',UserData.R_FileWaterMirror))
-
+        NW = fullfile(UserData.MainPath, UserData.UserName,'Outputs', UserData.ExeNumber,'Explore',UserData.R_FileWaterMirror);
+        WaterMirror.GRIDobj2geotiff(NW)
+        movefile(NW, [NW,'f'])
+        
     end
     
     % save final error
