@@ -289,7 +289,7 @@ try
     JoJo = Hp.Volumen == 0;
     if sum(JoJo) > 0
         ValueError = Hp.ID(JoJo);
-        fprintf(ID_File,'- En los modelos de DOR y DORw los siguientes proyectos identificados con los códigos ');
+        fprintf(ID_File,'- En los modelos de DOR y DORw los siguientes proyectos identificados con los cÃ³digos ');
         fprintf(ID_File,num2str(ValueError(1)));        
         for i = 2:length(ValueError)
             fprintf(ID_File,[', ',num2str(ValueError(i))]);
@@ -305,12 +305,12 @@ try
     JoJo = Hp.LossRate == 0;
     if sum(JoJo) > 0
         ValueError = Hp.ID(JoJo);
-        fprintf(ID_File,'- En el modelo de SAI los siguientes proyectos identificados con los códigos ');
+        fprintf(ID_File,'- En el modelo de SAI los siguientes proyectos identificados con los cÃ³digos ');
         fprintf(ID_File,num2str(ValueError(1)));        
         for i = 2:length(ValueError)
             fprintf(ID_File,[', ',num2str(ValueError(i))]);
         end
-        fprintf(ID_File,'  no fueron considerados dado que presentan valores de cero [0] en el porcentaje de retención de sedimentos.');
+        fprintf(ID_File,'  no fueron considerados dado que presentan valores de cero [0] en el porcentaje de retenciÃ³n de sedimentos.');
         fprintf(ID_File,'\n');
     else
         fprintf(ID_File,'- En el modelo de SAI todos los proyectos fueron considerados.');
@@ -321,12 +321,12 @@ try
     JoJo = Hp.Height == 0;
     if sum(JoJo) > 0
         ValueError = Hp.ID(JoJo);
-        fprintf(ID_File,'- En el modelo de Huella los siguientes proyectos identificados con los códigos ');
+        fprintf(ID_File,'- En el modelo de Huella los siguientes proyectos identificados con los cÃ³digos ');
         fprintf(ID_File,num2str(ValueError(1)));        
         for i = 2:length(ValueError)
             fprintf(ID_File,[', ',num2str(ValueError(i))]);
         end
-        fprintf(ID_File,'  no fueron considerados dado que presentan valores de cero [0] en el porcentaje de retención de sedimentos.');
+        fprintf(ID_File,'  no fueron considerados dado que presentan valores de cero [0] en el porcentaje de retenciÃ³n de sedimentos.');
     else
         fprintf(ID_File,'- En el modelo de Huella todos los proyectos fueron considerados.');
     end
@@ -483,8 +483,8 @@ try
                 end
                 % ----------------------------------
                 
-                [Fil, col] =  size(Footprint_Hp);
-                if Fil == 1
+                [Fil, col, fondo] =  size(Footprint_Hp);
+                if fondo == 1
                     Footprint_Hp = Footprint_Hp';
                 else
                     Footprint_Hp = permute(Footprint_Hp,[2 3 1]);
@@ -641,8 +641,8 @@ try
                 end
                 % ----------------------------------
 
-                [Fil, col] =  size(Footprint_Hp);
-                if Fil == 1
+                [Fil, col, fondo] =  size(Footprint_Hp);
+                if fondo == 1
                     Footprint_Hp = Footprint_Hp';
                 else
                     Footprint_Hp = permute(Footprint_Hp,[2 3 1]);
