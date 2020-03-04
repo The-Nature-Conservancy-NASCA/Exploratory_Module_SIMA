@@ -282,7 +282,7 @@ try
     Hp.Qmed         = (Tmp(:,1)*0);    
     
     %% Check -> Hydropower Variables
-    NameFile  = fullfile(UserData.MainPath, UserData.UserName,'Outputs', num2str(UserData.ExeNumber),'StausError.txt ');
+    NameFile  = fullfile(UserData.MainPath, UserData.UserName,'Outputs', num2str(UserData.ExeNumber),'StatusError.txt');
     ID_File     = fopen(NameFile,'w');
     
     % DOR and DORw check
