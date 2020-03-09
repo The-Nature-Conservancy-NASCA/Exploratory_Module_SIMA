@@ -22,7 +22,7 @@ La fragmentación de sistemas fluviales se refiere a la pérdida de conectividad
 
 En este contexto, el índice de fragmentación de sistemas fluviales permite cuantificar de manera porcentual la perdida de red fluvial asociada a un proceso natural específico como, por ejemplo, tramos fluviales asociados a un ecosistema ribereño, el rango de migración de peces, etc. Matemáticamente éste índice se define como:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;{P}_{c,i}=(1-\frac{{L}_{i}}{{L}_{0,i}})*100"/>\
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;{P}_{c,i}=(1-\frac{{L}_{i}}{{L}_{0,i}})*100"/>
 
 P_(c,i)	Porcentaje de pérdida de la red de drenaje asociada al proceso de interés i.
 L_0	Longitud de la red de drenaje asociada al proceso i, en la condición de línea base.
@@ -110,24 +110,22 @@ Considerando la información disponible, para los propósitos de este informe, s
 
 El modelo planteado para la estimación de los caudales medios anuales multianuales de las áreas de drenaje que componen la macrocuenca Magdalena Cauca, correspondió al propuesto por Turc. Éste considera que el caudal medio anual multianual en un afluente es el resultado del diferencial entre la precipitación media anual multianual (mm) y la evapotranspiración real media mensual multianual (mm). Matemáticamente este modelo resultar ser:
 
-Q=(P-ETR)
+<img src="https://latex.codecogs.com/gif.latex?Q=(P-ETR)" title="Q=(P-ETR)" /></a>
 
 Dada la modesta cantidad de estaciones con la que cuanta la macrocuenca Magdalena-Cauca con capacidad de estimar evapotranspiraciones reales, se optó por realizar su estimación mediante el modelo propuesto por este mismo autor. El modelo propuesto por Turc para determinar la evapotranspiración real, se basa en una relación empírica entre la precipitación y la temperatura, cuya verificación fue realizada en un total de 254 cuencas. Matemáticamente el modelo se define como:
 
-ETR=P/√(0.9+P^2/〖L(T)〗^2 )
+<img src="https://latex.codecogs.com/gif.latex?ETR=\frac{P}{\sqrt[2]{0.9&plus;/\frac{P^{2}}{L(t)^{2}}}}" title="ETR=\frac{P}{\sqrt[2]{0.9+/\frac{P^{2}}{L(t)^{2}}}}" /></a>
 
 Donde P es la precipitación media anual multianual expresada en mm y la expresión L(t) se define como:
 
-L(t)=300+25T+0.05T^2
+<img src="https://latex.codecogs.com/gif.latex?L(t)=300&plus;25T&plus;0.05T^{2}" title="L(t)=300+25T+0.05T^{2}" /></a>
 
 Donde T es la temperatura media anual multianual del aire en °C. El modelo de Turc es válido si se cumple la siguiente condición:
-P/L≥0.316 caso contrario:
-
-ETR=P
+<img src="https://latex.codecogs.com/gif.latex?\frac{P}{L}\geq&space;0.316" title="\frac{P}{L}\geq 0.316" /></a> caso contrario: <img src="https://latex.codecogs.com/gif.latex?ETR=P" title="ETR=P" /></a>
 
 Ahora bien, reconociendo que existe una incertidumbre asociada a la estimación de la ETR mediante el modelo de Turc (producto de la complejidad de los procesos físicos que la rigen los procesos transpirativos principalmente), se consideró parametrizar este modelo, mediante un parámetro Alpha, dado lugar a una ETR corregida definida como:
 
-ETRc= ETR
+<img src="https://latex.codecogs.com/gif.latex?ETR_{c}=ETR*\alpha" title="ETR_{c}=ETR*\alpha" /></a>
 
 Vale la pena resaltar que, para el modelo de balance hidrológico, este planteamiento supone que la precipitación es totalmente correcta y que solo el error en el balance se encuentra asociado a la ETR.
 
@@ -139,11 +137,16 @@ Como se logra visualizar en la Figura 24 – B, existen áreas de drenaje las cu
 
 Como métrica de desempeño del modelo, se consideró el coeficiente de Nash-Sutcliffe (Ver los trabajos de Teegavarapu & Elshorbagy (2005) y Dawson, Abrahart and See, (2007)), cuya expresión matemática es:
 
-Nash=  1-  (∑_(i=1)^n〖(x_0^t- x_m^t)〗^2 )/(∑_(i=1)^n〖(x_0^t- x_0^-)〗^2 )
+<img src="https://latex.codecogs.com/gif.latex?Nash=1-\frac{\sum_{i=1}^{n}(x_{0}^{t}-x_{m}^{t})^{2}}{\sum_{i=1}^{n}(x_{0}^{t}-{\bar{x}}_{0})^{2}}" title="Nash=1-\frac{\sum_{i=1}^{n}(x_{0}^{t}-x_{m}^{t})^{2}}{\sum_{i=1}^{n}(x_{0}^{t}-{\bar{x}}_{0})^{2}}" /></a>
+
 Dónde
-x_0^t	Valor observado.
-x_m^t	Valor simulado.
-x_0^-	Valor promedio.
+
+<img src="https://latex.codecogs.com/gif.latex?x_{0}^{t}" title="x_{0}^{t}" /></a>	Valor observado.
+
+<img src="https://latex.codecogs.com/gif.latex?x_{0}^{t}" title="x_{m}^{t}" /></a>	Valor simulado.
+
+<img src="https://latex.codecogs.com/gif.latex?\bar{x}}_{0}" /></a> Valor promedio.
+
 Esta métrica varía desde -∞ hasta 1. Cuando el coeficiente de Nash toma un valor de 1 se considera que la calibración del modelo fue perfecta. Los rangos para evaluar el nivel de ajuste con esta métrica se presentan en la Tabla 2.
 
 
