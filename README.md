@@ -105,7 +105,7 @@ En el presente apéndice se describe el esquema metodológico con el cual se abo
 
 ### Sedimentos
 
-Para la estimación de Q_(s,o), se tomaron como base los resultados obtenidos en el documento “Estudio y desarrollo de herramientas para modelación de sedimentos y de dinámica de inundación como complemento a la modelación hidrológica en WEAP” (Gotta, TNC, 2016), donde se estimó el rendimiento en la producción de sedimentos en suspensión de la cuenca Magdalena, mostrado en la Figura 27.
+Para la estimación de <img src="https://latex.codecogs.com/svg.latex?\Large&space;{{Q}_{s,0}}"/>, se tomaron como base los resultados obtenidos en el documento “Estudio y desarrollo de herramientas para modelación de sedimentos y de dinámica de inundación como complemento a la modelación hidrológica en WEAP” (Gotta, TNC, 2016), donde se estimó el rendimiento en la producción de sedimentos en suspensión de la cuenca Magdalena, mostrado en la Figura 27.
  
 Figura 27. Rendimiento de la producción de sedimentos de la cuenca Magdalena Cauca. Tomado de (Gotta, TNC, 2016)
 
@@ -115,27 +115,27 @@ Figura 28. Fuentes y sumideros de sedimento en el balance de sedimentos de un tr
 
 La estimación de los aportes de sedimentos generados por erosión en las laderas se realizó a través de la metodología RUSLE (Revised Universal Sol Loss Equation) desarrollada por el servicio de conservación de suelos de los Estados Unidos. La ecuación de cálculo se presenta a continuación.
 
-E_x  = R.K.LS.C.P
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;{E}_{x}=R*K*LS*C*P"/>
 
-Donde E_x es la erosión laminar, R la erosividad de la lluvia, K la erodabilidad del suelo, LS el factor topográfico, C las coberturas del suelo y P las prácticas de manejo del mismo. 
+Donde <img src="https://latex.codecogs.com/svg.latex?\Large&space;{E}_{x}"/> es la erosión laminar, R la erosividad de la lluvia, K la erodabilidad del suelo, LS el factor topográfico, C las coberturas del suelo y P las prácticas de manejo del mismo. 
 La erosión en cárcavas se refiere a los aportes de sedimentos causados por procesos de incisión y ensanchamiento de las líneas de drenaje. Conceptualmente, la estimación de estos aportes considera el volumen de las cárcavas y el período de tiempo para su desarrollo. Su estimación se realiza a partir de la siguiente expresión.
 
-G_x=
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;{G}_{x}="/>
 
-Donde ρ_s es la densidad aparente seca del sedimento característico de las cárcavas, p_b es la proporción de material que contribuye al sedimento en suspensión, α es el área transversal media de la(s) cárcava(s) de la sub-cuenca o ladera, l_x es la longitud de la(s) cárcava(s) de la sub-cuenca o ladera y f es un factor (<1) a partir del cual puede modularse el aporte de sedimentos dependiendo de la actividad o madurez del proceso erosivo.
+Donde <img src="https://latex.codecogs.com/svg.latex?\Large&space;{\rho}_{s}"/> es la densidad aparente seca del sedimento característico de las cárcavas, <img src="https://latex.codecogs.com/svg.latex?\Large&space;{p}_{b}"/> es la proporción de material que contribuye al sedimento en suspensión, α es el área transversal media de la(s) cárcava(s) de la sub-cuenca o ladera, <img src="https://latex.codecogs.com/svg.latex?\Large&space;{L}_{x}"/> es la longitud de la(s) cárcava(s) de la sub-cuenca o ladera y f es un factor (<1) a partir del cual puede modularse el aporte de sedimentos dependiendo de la actividad o madurez del proceso erosivo.
 
 Para la estimación de los aportes por erosión en banca, se utilizó la expresión de Wilkinson et al. (2009)
 
-B_x= 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;{B}_{x}="/>
 
-Donde 〖B_x es la tasa de erosión lateral (m/año), ρ_s es la densidad aparente seca del sedimento característico de las márgenes del tramo, p_b es la proporción de material que contribuye al sedimento en suspensión, h es la profundidad media de banca llena del tramo y L_x es la longitud del tramo.
+Donde 〖B_x es la tasa de erosión lateral (m/año), <img src="https://latex.codecogs.com/svg.latex?\Large&space;{\rho}_{s}"/> es la densidad aparente seca del sedimento característico de las márgenes del tramo, <img src="https://latex.codecogs.com/svg.latex?\Large&space;{p}_{b}"/> es la proporción de material que contribuye al sedimento en suspensión, h es la profundidad media de banca llena del tramo y <img src="https://latex.codecogs.com/svg.latex?\Large&space;{L}_{x}"/> es la longitud del tramo.
 
-Para la modelación de depositación en llanuras, se asume que la proporción de sedimento en suspensión I_x que ingresa al tramo que es posteriormente liberada en la llanura de inundación para cada evento es igual a la proporción del caudal desbordado ((Q-Q_B))⁄Q donde Q_B es el caudal de banca llena y Q el caudal total, depositación de sedimento (en toneladas por evento). El cálculo se realiza mediante la siguiente expresión.
+Para la modelación de depositación en llanuras, se asume que la proporción de sedimento en suspensión <img src="https://latex.codecogs.com/svg.latex?\Large&space;{I}_{x}"/> que ingresa al tramo que es posteriormente liberada en la llanura de inundación para cada evento es igual a la proporción del caudal desbordado <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{Q-{Q}_{B}}{Q}"/> donde <img src="https://latex.codecogs.com/svg.latex?\Large&space;{Q}_{B}"/> es el caudal de banca llena y Q el caudal total, depositación de sedimento (en toneladas por evento). El cálculo se realiza mediante la siguiente expresión.
 
-F_x=I
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;{F}_{x}=I"/>
 
-Donde A_f es el área de la llanura de inundación y _s es la velocidad de sedimentación de partícula.
-Por otra parte, la estimación la retención en embalses (aplicable al escenario analizado Q_(s,e)), se aplica la expresión de Dendy para estimar la eficiencia media de atrapamiento como:
+Donde <img src="https://latex.codecogs.com/svg.latex?\Large&space;{A}_{f}"/> es el área de la llanura de inundación y _s es la velocidad de sedimentación de partícula.
+Por otra parte, la estimación la retención en embalses (aplicable al escenario analizado <img src="https://latex.codecogs.com/svg.latex?\Large&space;{Q}_{s,e}"/>), se aplica la expresión de Dendy para estimar la eficiencia media de atrapamiento como:
 
 E=100
 
