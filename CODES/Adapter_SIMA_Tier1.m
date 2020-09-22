@@ -258,14 +258,7 @@ try
     end
 
     Tmp    = textscan(ID_File,'%f','Delimiter',',');
-    Tmp    = reshape(cell2mat(Tmp),N,[])';
-    Scenarios = Tmp(:,10:N);
-    fclose(ID_File);
-
-    Tmp(Tmp == NaNValue) = NaN;
-    if UserData.ExplorerStatus == 1
-        Tmp(isnan(Tmp)) = 0; 
-    end
+    Tmp    = reshape(cell2mat(Tmp),N,[])';    
     
     %% Ojooooo !!!!! Control de ArcID Repetidos
     Store_Posi = {};
@@ -278,6 +271,15 @@ try
     for i = 1:length(Store_Posi)
         [id, posi] = ismember(Tmp(:,1), Store_Posi{i});
         Tmp(:,9+i) = id;
+    end
+    
+    %% Continue
+    Scenarios = Tmp(:,10:N);
+    fclose(ID_File);
+
+    Tmp(Tmp == NaNValue) = NaN;
+    if UserData.ExplorerStatus == 1
+        Tmp(isnan(Tmp)) = 0; 
     end
     
     % Create Hydroelectric Project Object
