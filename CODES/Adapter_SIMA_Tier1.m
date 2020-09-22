@@ -356,7 +356,7 @@ try
             ETR(id) = (Pcp(id))./sqrt( 0.9 + ((Pcp(id).^2)./(L(id).^2)) );
             id      = ((Pcp./L) <= 0.316);
             if sum(id) > 0
-                ETR(id) = PT(id);    
+                ETR(id) = Pcp(id);    
             end
             ETRc    = ETR .* FactorFlow;
 
