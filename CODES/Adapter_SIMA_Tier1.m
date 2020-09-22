@@ -266,6 +266,20 @@ try
     if UserData.ExplorerStatus == 1
         Tmp(isnan(Tmp)) = 0; 
     end
+    
+    %% Ojooooo !!!!! Control de ArcID Repetidos
+    Store_Posi = {};
+    for i = 10:length(Tmp(1,:))
+        Store_Posi{i - 9} = Tmp(logical(Tmp(:,i)),1);
+    end
+    [id, posi] = ismember(unique(Tmp(:,1)),  Tmp(:,1));
+    Tmp = Tmp(posi,:);
+    Tmp(:,10:end) = 0;
+    for i = 1:length(Store_Posi)
+        [id, posi] = ismember(Tmp(:,1), Store_Posi{i});
+        Tmp(:,9+i) = id;
+    end
+    
     % Create Hydroelectric Project Object
     Hp              = ClassHydroelectricProject(Tmp(:,1));
     Hp.Coor_X       = Tmp(:,2);
