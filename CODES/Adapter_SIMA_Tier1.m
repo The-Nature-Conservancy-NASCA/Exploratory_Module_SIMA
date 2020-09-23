@@ -621,7 +621,9 @@ try
             
             %% Footprint Random
             if UserData.FootprintStatus
-
+                %% Asignation BaseLine Project
+                Hp.Scenario(Hp.Years > 0) = true;
+                
 %                 mkdir(fullfile(UserData.MainPath, UserData.UserName,'Outputs', UserData.ExeNumber,['Narrative-',num2str(i)],'Footprints'))
                 mkdir(fullfile(UserData.MainPath, UserData.UserName,'Outputs', UserData.ExeNumber,NameFolderNarra{i},'Footprints'))
                 
